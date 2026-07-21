@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Citadelle Laferrière",
+    "image": "reef1.jpg",
+    "description": "During the Citadelle Laferrière tour, you will explore this mighty mountaintop fortress in northern Haiti, a UNESCO World Heritage site and enduring symbol of freedom."
+  },
+  {
+    "name": "Palais Sans-Souci",
+    "image": "reef2.jpg",
+    "description": "The Palais Sans-Souci tour takes you through the majestic ruins of Haiti's royal palace, surrounded by tropical gardens with breathtaking views over the northern plain."
+  },
+  {
+    "name": "Île-à-Vache",
+    "image": "reef3.jpg",
+    "description": "The Île-à-Vache tour brings you to this pristine island off Haiti's southern coast, featuring white-sand beaches, crystal-clear turquoise waters, and a serene tropical atmosphere."
+  }
+  ,
+  {
+  "name": "Paradise Island",
+  "image": "reef1.jpg",
+  "description": "Paradise Island was added to verify that Handlebars renders data dynamically from JSON."
+}
+]
