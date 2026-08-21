@@ -1,4 +1,4 @@
-[
+export const trips = [
   {
     "code": "HT001",
     "name": "Citadelle Laferrière",
@@ -7,7 +7,7 @@
     "resort": "Cap-Haïtien",
     "perPerson": 799,
     "image": "reef1.jpg",
-    "description": "During the Citadelle Laferrière tour, you will explore this mighty mountaintop fortress in northern Haiti, a UNESCO World Heritage site and enduring symbol of freedom."
+    "description": "During the Citadelle Laferrière tour..."
   },
   {
     "code": "HT002",
@@ -17,7 +17,7 @@
     "resort": "Milot",
     "perPerson": 699,
     "image": "reef2.jpg",
-    "description": "The Palais Sans-Souci tour takes you through the majestic ruins of Haiti's royal palace, surrounded by tropical gardens with breathtaking views over the northern plain."
+    "description": "The Palais Sans-Souci tour..."
   },
   {
     "code": "HT003",
@@ -27,7 +27,7 @@
     "resort": "Île-à-Vache",
     "perPerson": 999,
     "image": "reef3.jpg",
-    "description": "The Île-à-Vache tour brings you to this pristine island off Haiti's southern coast, featuring white-sand beaches, crystal-clear turquoise waters, and a serene tropical atmosphere."
+    "description": "The Île-à-Vache tour..."
   },
   {
     "code": "HT004",
@@ -39,4 +39,4 @@
     "image": "reef1.jpg",
     "description": "Paradise Island was added to verify that Handlebars renders data dynamically from JSON."
   }
-]
+];

@@ -1,11 +1,10 @@
 export interface Trip {
-    _id?: string;
     code: string;
     name: string;
     length: string;
-    start: string;
+    start: Date | string;
     resort: string;
-    perPerson: string;
+    perPerson: number;
     image: string;
     description: string;
 }

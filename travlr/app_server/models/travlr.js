@@ -30,7 +30,7 @@ const tripSchema = new mongoose.Schema({
     },
 
     perPerson: {
-        type: String,
+        type: Number,
         required: true
     },
 
