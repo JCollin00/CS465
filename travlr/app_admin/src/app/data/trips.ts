@@ -28,15 +28,5 @@ export const trips = [
     "perPerson": 999,
     "image": "reef3.jpg",
     "description": "The Île-à-Vache tour..."
-  },
-  {
-    "code": "HT004",
-    "name": "Paradise Island",
-    "length": "6 nights",
-    "start": "2026-12-20",
-    "resort": "Paradise Island",
-    "perPerson": 1099,
-    "image": "reef1.jpg",
-    "description": "Paradise Island was added to verify that Handlebars renders data dynamically from JSON."
   }
 ];

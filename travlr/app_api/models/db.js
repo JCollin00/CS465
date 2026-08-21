@@ -20,10 +20,13 @@ mongoose.connection.on('disconnected', () => {
     console.log('Mongoose disconnected');
 });
 
-// Graceful shutdown
+// Graceful shutdown - CORRECTION
 const gracefulShutdown = (msg, callback) => {
-    mongoose.connection.close(() => {
+    mongoose.connection.close().then(() => {  // ← CORRECTION : utiliser .then()
         console.log(`Mongoose disconnected through ${msg}`);
+        callback();
+    }).catch(err => {
+        console.log('Error during shutdown:', err);
         callback();
     });
 };
@@ -61,4 +64,6 @@ process.on('SIGTERM', () => {
 
 // Load models
 require('./travlr');
+require('./user');
+
 module.exports = mongoose;

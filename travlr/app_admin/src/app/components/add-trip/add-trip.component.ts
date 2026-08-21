@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { TripDataService } from '../services/trip-data.service';
+import { TripDataService } from '../../services/trip-data.service';  // ← Vérifier le chemin
 
 @Component({
     selector: 'app-add-trip',
     standalone: true,
-    imports: [CommonModule, ReactiveFormsModule],  // ← IMPORTANT
+    imports: [CommonModule, ReactiveFormsModule],
     templateUrl: './add-trip.component.html',
-    styleUrl: './add-trip.component.css'
+    styleUrls: ['./add-trip.component.css']
 })
 export class AddTripComponent implements OnInit {
     addForm!: FormGroup;
@@ -35,29 +35,21 @@ export class AddTripComponent implements OnInit {
     }
 
     public onSubmit() {
-        console.log('1. Submit button clicked!');  // ← AJOUTER
         this.submitted = true;
-        console.log('2. Form valid?', this.addForm.valid);  // ← AJOUTER
-
         if (this.addForm.valid) {
-            console.log('3. Form is valid, preparing data...');  // ← AJOUTER
             const formData = this.addForm.value;
             formData.perPerson = Number(formData.perPerson);
-            console.log('4. Data to send:', formData);  // ← AJOUTER
 
             this.tripService.addTrip(formData)
                 .subscribe({
                     next: (data: any) => {
-                        console.log('5. Success!', data);  // ← AJOUTER
-                        this.router.navigate(['']);
+                        console.log('Trip added:', data);
+                        this.router.navigate(['/trips']);
                     },
                     error: (error: any) => {
-                        console.log('6. Error:', error);  // ← AJOUTER
+                        console.log('Error adding trip:', error);
                     }
                 });
-        } else {
-            console.log('7. Form is INVALID!');  // ← AJOUTER
-            console.log('8. Form errors:', this.addForm.errors);  // ← AJOUTER
         }
     }
 
